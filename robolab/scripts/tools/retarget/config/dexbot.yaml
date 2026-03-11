@@ -1,0 +1,65 @@
+gmr_dof_names:
+  - leg_r_joint_1
+  - leg_r_joint_2
+  - leg_r_joint_3
+  - leg_r_joint_4
+  - leg_r_joint_5
+  - leg_r_joint_6
+  - leg_l_joint_1
+  - leg_l_joint_2
+  - leg_l_joint_3
+  - leg_l_joint_4
+  - leg_l_joint_5
+  - leg_l_joint_6
+  - torso_joint
+  - arm_r_joint_1
+  - arm_r_joint_2
+  - arm_r_joint_3
+  - arm_r_joint_4
+  - arm_r_joint_5
+  - arm_r_joint_6
+  - arm_r_joint_7
+  - arm_l_joint_1
+  - arm_l_joint_2
+  - arm_l_joint_3
+  - arm_l_joint_4
+  - arm_l_joint_5
+  - arm_l_joint_6
+  - arm_l_joint_7
+
+lab_dof_names:
+- leg_l_joint_1
+- leg_r_joint_1
+- torso_joint
+- leg_l_joint_2
+- leg_r_joint_2
+- arm_l_joint_1
+- arm_r_joint_1
+- leg_l_joint_3
+- leg_r_joint_3
+- arm_l_joint_2
+- arm_r_joint_2
+- leg_l_joint_4
+- leg_r_joint_4
+- arm_l_joint_3
+- arm_r_joint_3
+- leg_l_joint_5
+- leg_r_joint_5
+- arm_l_joint_4
+- arm_r_joint_4
+- leg_l_joint_6
+- leg_r_joint_6
+- arm_l_joint_5
+- arm_r_joint_5
+- arm_l_joint_6
+- arm_r_joint_6
+- arm_l_joint_7
+- arm_r_joint_7
+
+lab_key_body_names:
+  - leg_r_link_6
+  - leg_l_link_6
+  - arm_r_link_4
+  - arm_l_link_4
+  - arm_r_link_7
+  - arm_l_link_7
