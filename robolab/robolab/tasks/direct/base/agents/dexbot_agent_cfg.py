@@ -179,7 +179,7 @@ class DEXBOTRoughAgentCfg(DEXBOTFlatAgentCfg):
             symmetry_cfg=RslRlSymmetryCfg(
                 use_data_augmentation=True, 
                 use_mirror_loss=True,
-                mirror_loss_coeff=0.2, 
+                mirror_loss_coeff=0.8, 
                 data_augmentation_func=data_augmentation_func
             ),
             rnd_cfg=None,  # RslRlRndCfg()
