@@ -2,7 +2,7 @@
   <compiler angle="radian" meshdir="../meshes_sim/" eulerseq="zyx"/>
   <statistic meansize="0.153252" extent="1.90054" center="-0.0164687 0.00444038 -0.0159783"/>
     <option timestep='0.001' iterations='100' solver='PGS' gravity='0 0 -9.81'>
-    <flag sensornoise="enable" frictionloss="enable"/>
+    <flag frictionloss="enable"/>
     </option>
     <size njmax="500" nconmax="100" />
 
@@ -11,12 +11,10 @@
         <map znear='0.05'/>
     </visual>
     <default>
-        <joint limited='true'/>
         <motor ctrllimited='true'/>
-        <geom  condim='4' contype="1" conaffinity="15" solref='0.001 2' friction='0.9 0.2 0.2' group="1"/>
+        <geom  condim='4' contype="1" conaffinity="15" solref='0.001 2' friction='0.9 0.2 0.2' group="1" solimp="0.95 0.99 0.001"/>
         <equality solref='0.001 2'/>
-        <joint damping="0.05" frictionloss="0.01" armature="0.01"/>
-        <geom solimp="0.95 0.99 0.001"/>
+        <joint  limited='true' damping="0.05" frictionloss="0.01" armature="0.01"/>
     </default>
 
   <asset>
@@ -64,7 +62,6 @@
     <geom name="ground" type="plane" size="0 0 1" pos="0.001 0 0" quat="1 0 0 0" material="matplane" condim="1" conaffinity='15' group="0"/>
 
     <body name="pelvis_link" pos="0 0 0.85">
-      <site name='imu' size='0.01' pos='0.0 0 0.0'/>
       <inertial pos="-0.0004802 1.19e-06 -0.00088639" quat="0.999976 -4.85822e-05 -0.00688874 1.44445e-06" mass="7.79141" diaginertia="0.064436 0.0396867 0.0382329"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="pelvis_link"/>
       <joint name="floating_base_joint" type="free" limited="false"/>
@@ -142,6 +139,7 @@
         </body>
       </body>
       <body name="torso_link">
+        <site name='imu' size='0.01' pos='0.0 0 0.0'/>
         <inertial pos="0 0 0.354011" mass="16.6969" diaginertia="0.357743 0.312176 0.160614"/>
         <joint name="torso_joint" pos="0 0 0" axis="0 0 1" range="-2 2"/>
         <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="torso_link"/>
